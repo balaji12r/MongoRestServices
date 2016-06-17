@@ -24,6 +24,8 @@ public class BookController {
 
     public Map<String, Object> createBook(@RequestBody Map<String, Object> bookMap){
 
+        System.out.println("book "+bookMap);
+
         Book book = new Book(bookMap.get("name").toString(),
                 bookMap.get("author").toString(),
                 (Double)bookMap.get("price"),
